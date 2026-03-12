@@ -3,6 +3,7 @@
 
 #include <raylib.h>
 #include "Constants.hpp"
+#include "GameObjects.hpp"
 
 class Game
 {
@@ -21,6 +22,8 @@ private:
 	Vector2 appWindowScale{ 1.0f,1.0f };
 	int gameScreenWidth{ SCREEN_WIDTH };
 	int gameScreenHeight{ SCREEN_HEIGHT };
+
+	GameObjects gameObjects;
 
 };
 #endif

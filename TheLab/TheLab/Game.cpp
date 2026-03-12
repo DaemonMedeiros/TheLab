@@ -28,8 +28,9 @@ void Game::Init()
 {
 	appWindow = LoadRenderTexture(SCREEN_WIDTH, SCREEN_HEIGHT);
 	SetTextureFilter(appWindow.texture, TEXTURE_FILTER_BILINEAR);
-
 	appWindowScale = { (float)GetScreenWidth() / gameScreenWidth, (float)GetScreenHeight() / gameScreenHeight };
+
+	gameObjects.init();
 }
 
 void Game::ScaleAndRenderWindow()
@@ -52,8 +53,10 @@ void Game::ScaleAndRenderWindow()
 void Game::Update(float t_dt)
 {
 	appWindowScale = { (float)GetScreenWidth() / gameScreenWidth, (float)GetScreenHeight() / gameScreenHeight };
+	gameObjects.update();
 }
 
 void Game::Draw()
 {
+	gameObjects.draw();
 }
