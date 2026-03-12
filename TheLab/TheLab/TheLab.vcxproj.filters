@@ -16,22 +16,28 @@
     <Filter Include="Header Files\Enums">
       <UniqueIdentifier>{e8391347-9ac6-4e2a-927d-055343d54723}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\Main_Loop">
+      <UniqueIdentifier>{03c8a8ef-be58-4a83-807a-e8d3479dfe23}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Main_Loop">
+      <UniqueIdentifier>{39f4981e-4c86-443a-b1c3-d99a82d0d1c5}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="main.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Game.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="GameObjects.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files\Main_Loop</Filter>
+    </ClCompile>
+    <ClCompile Include="Game.cpp">
+      <Filter>Source Files\Main_Loop</Filter>
+    </ClCompile>
+    <ClCompile Include="AssetLoader.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Game.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="Constants.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -43,6 +49,12 @@
     </ClInclude>
     <ClInclude Include="GameStates.h">
       <Filter>Header Files\Enums</Filter>
+    </ClInclude>
+    <ClInclude Include="Game.hpp">
+      <Filter>Header Files\Main_Loop</Filter>
+    </ClInclude>
+    <ClInclude Include="AssetLoader.hpp">
+      <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

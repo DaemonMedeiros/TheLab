@@ -3,6 +3,7 @@
 
 #include <raylib.h>
 #include "Constants.hpp"
+#include "AssetLoader.hpp"
 #include "GameObjects.hpp"
 
 class Game
@@ -23,6 +24,8 @@ private:
 	int gameScreenWidth{ SCREEN_WIDTH };
 	int gameScreenHeight{ SCREEN_HEIGHT };
 
+	bool texturesLoaded{ false };
+	AssetLoader assetLoader;
 	GameObjects gameObjects;
 
 };

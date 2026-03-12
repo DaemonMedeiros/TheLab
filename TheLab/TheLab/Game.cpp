@@ -18,7 +18,14 @@ void Game::Run()
 	while (!WindowShouldClose())
 	{
 		float deltaTime = GetFrameTime();
-		Update(deltaTime);
+		if (!texturesLoaded)
+		{
+			assetLoader.loadTextures();
+		}
+		else
+		{
+			Update(deltaTime);
+		}
 		ScaleAndRenderWindow();
 	}
 	CloseWindow();
@@ -38,7 +45,14 @@ void Game::ScaleAndRenderWindow()
 	BeginTextureMode(appWindow);
 	ClearBackground(RAYWHITE);
 	// ----
-	Draw();
+	if (!texturesLoaded)
+	{
+		assetLoader.drawProgressBar();
+	}
+	else
+	{
+		Draw();
+	}
 	// ----
 	EndTextureMode();
 	BeginDrawing();
@@ -52,6 +66,7 @@ void Game::ScaleAndRenderWindow()
 
 void Game::Update(float t_dt)
 {
+	
 	appWindowScale = { (float)GetScreenWidth() / gameScreenWidth, (float)GetScreenHeight() / gameScreenHeight };
 	gameObjects.update();
 }
