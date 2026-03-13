@@ -5,6 +5,7 @@
 #include "../Enums/GameStates.h"
 #include "../Constants/Constants.hpp"
 #include "../Handlers/AssetHandler.hpp"
+#include "../Handlers/InputHandler.hpp"
 #include "../Handlers/UIHandler.hpp"
 #include "../GameObjects.hpp"
 
@@ -18,7 +19,7 @@ public:
 private:
 	void Init();
 	void InitRenderWindow();
-	void Update(float t_dt);
+	void Update(float& t_dt);
 	void DrawRenderWindow();
 	void Draw();
 	void FreeResources();
@@ -31,6 +32,8 @@ private:
 	AssetHandler* assetHandler { nullptr };
 	UIHandler* uiHandler{ nullptr };
 	GameObjects* gameObjects { nullptr };
+	InputHandler inputHandler;
 	GameState gameState{ GS_LOADING };
+	Command activeCommand{ CMD_NONE };
 };
 #endif

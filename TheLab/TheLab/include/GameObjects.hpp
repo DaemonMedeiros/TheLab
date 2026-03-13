@@ -2,6 +2,7 @@
 #define GAMEOBJECTS_HPP
 
 #include <iostream>
+#include "../include/Enums/Commands.h"
 
 class GameObjects
 {
@@ -10,7 +11,7 @@ public:
 	~GameObjects();
 
 	void init();
-	void update();
+	void update(double t_dt, Command& t_command);
 	void draw();
 
 private:

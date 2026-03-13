@@ -60,8 +60,10 @@ void Game::DrawRenderWindow()
 	EndDrawing();
 }
 
-void Game::Update(float t_dt)
+void Game::Update(float& t_dt)
 {
+	activeCommand = inputHandler.getActiveCommand();
+	
 	switch (gameState)
 	{
 		case GS_LOADING:
@@ -70,7 +72,7 @@ void Game::Update(float t_dt)
 		case GS_START:
 		break;
 		case GS_PLAY:
-			gameObjects->update();
+			gameObjects->update(t_dt, activeCommand);
 		break;
 		case GS_PAUSE:
 		break;
