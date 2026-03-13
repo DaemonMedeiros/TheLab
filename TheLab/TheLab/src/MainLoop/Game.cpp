@@ -1,6 +1,6 @@
-#include "Game.hpp"
+#include "../../include/MainLoop/Game.hpp"
 
-Game::Game()
+Game::Game(AssetLoader& t_assetLoader) : assetLoader(t_assetLoader)
 {
 }
 

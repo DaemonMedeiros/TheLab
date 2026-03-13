@@ -18,6 +18,23 @@
       <Platform>x64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="include\AssetLoader.hpp" />
+    <ClInclude Include="include\Constants\Constants.hpp" />
+    <ClInclude Include="include\Enums\Commands.h" />
+    <ClInclude Include="include\Enums\GameStates.h" />
+    <ClInclude Include="include\GameObjects.hpp" />
+    <ClInclude Include="include\MainLoop\Game.hpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\AssetLoader.cpp" />
+    <ClCompile Include="src\GameObjects.cpp" />
+    <ClCompile Include="src\MainLoop\Game.cpp" />
+    <ClCompile Include="src\MainLoop\main.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="resources\textures\default.jpeg" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
@@ -134,20 +151,6 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
   </ItemDefinitionGroup>
-  <ItemGroup>
-    <ClCompile Include="AssetLoader.cpp" />
-    <ClCompile Include="Game.cpp" />
-    <ClCompile Include="GameObjects.cpp" />
-    <ClCompile Include="main.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="AssetLoader.hpp" />
-    <ClInclude Include="Commands.h" />
-    <ClInclude Include="Constants.hpp" />
-    <ClInclude Include="Game.hpp" />
-    <ClInclude Include="GameObjects.hpp" />
-    <ClInclude Include="GameStates.h" />
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

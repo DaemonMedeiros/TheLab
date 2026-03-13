@@ -16,45 +16,56 @@
     <Filter Include="Header Files\Enums">
       <UniqueIdentifier>{e8391347-9ac6-4e2a-927d-055343d54723}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files\Main_Loop">
+    <Filter Include="Header Files\Constants">
+      <UniqueIdentifier>{4ae7c488-d26d-475e-9c1c-7e99d7175ac2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\MainLoop">
       <UniqueIdentifier>{03c8a8ef-be58-4a83-807a-e8d3479dfe23}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\Main_Loop">
+    <Filter Include="Source Files\MainLoop">
       <UniqueIdentifier>{39f4981e-4c86-443a-b1c3-d99a82d0d1c5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\textures">
+      <UniqueIdentifier>{aa1ea140-c5ff-4fae-b554-8a770f18aaa7}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="GameObjects.cpp">
+    <ClInclude Include="include\Enums\Commands.h">
+      <Filter>Header Files\Enums</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Enums\GameStates.h">
+      <Filter>Header Files\Enums</Filter>
+    </ClInclude>
+    <ClInclude Include="include\MainLoop\Game.hpp">
+      <Filter>Header Files\MainLoop</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Constants\Constants.hpp">
+      <Filter>Header Files\Constants</Filter>
+    </ClInclude>
+    <ClInclude Include="include\AssetLoader.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\GameObjects.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\MainLoop\Game.cpp">
+      <Filter>Source Files\MainLoop</Filter>
+    </ClCompile>
+    <ClCompile Include="src\MainLoop\main.cpp">
+      <Filter>Source Files\MainLoop</Filter>
+    </ClCompile>
+    <ClCompile Include="src\AssetLoader.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="main.cpp">
-      <Filter>Source Files\Main_Loop</Filter>
-    </ClCompile>
-    <ClCompile Include="Game.cpp">
-      <Filter>Source Files\Main_Loop</Filter>
-    </ClCompile>
-    <ClCompile Include="AssetLoader.cpp">
+    <ClCompile Include="src\GameObjects.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Constants.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="GameObjects.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Commands.h">
-      <Filter>Header Files\Enums</Filter>
-    </ClInclude>
-    <ClInclude Include="GameStates.h">
-      <Filter>Header Files\Enums</Filter>
-    </ClInclude>
-    <ClInclude Include="Game.hpp">
-      <Filter>Header Files\Main_Loop</Filter>
-    </ClInclude>
-    <ClInclude Include="AssetLoader.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
+    <Image Include="resources\textures\default.jpeg">
+      <Filter>Resource Files\textures</Filter>
+    </Image>
   </ItemGroup>
 </Project>

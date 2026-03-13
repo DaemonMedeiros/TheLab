@@ -2,14 +2,14 @@
 #define GAME_HPP
 
 #include <raylib.h>
-#include "Constants.hpp"
-#include "AssetLoader.hpp"
-#include "GameObjects.hpp"
+#include "../Constants/Constants.hpp"
+#include "../AssetLoader.hpp"
+#include "../GameObjects.hpp"
 
 class Game
 {
 public:
-	Game();
+	Game(AssetLoader& t_assetLoader);
 	~Game();
 	void Run();
 

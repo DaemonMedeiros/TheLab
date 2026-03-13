@@ -1,7 +1,8 @@
-#include "AssetLoader.hpp"
+#include "../include/AssetLoader.hpp"
 
 AssetLoader::AssetLoader()
 {
+	for (int i = 0; i < TOTAL_TEXTURE_COUNT; i++){textures[i] = defaultTexture;}
 }
 
 AssetLoader::~AssetLoader()
