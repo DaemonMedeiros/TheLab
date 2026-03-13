@@ -1,18 +1,16 @@
-#include "../include/AssetLoader.hpp"
+#include "../include/AssetHandler.hpp"
 
-AssetLoader::AssetLoader()
+AssetHandler::AssetHandler()
 {
-	textures[0] = defaultTexture;
-	textureNames[0] = "DefaultTexture";
-	for (int i = 1; i < TOTAL_TEXTURE_COUNT; i++) { textures[i] = defaultTexture; textureNames[0] = '\0'; }
+	for (int i = 0; i < TOTAL_TEXTURE_COUNT; i++) { textures[i] = defaultTexture; }
 	loadProgress++;
 }
 
-AssetLoader::~AssetLoader()
+AssetHandler::~AssetHandler()
 {
 }
 
-void AssetLoader::loadTextures()
+void AssetHandler::loadTextures()
 {
 	if (loadProgress == TOTAL_TEXTURE_COUNT)
 	{
@@ -22,6 +20,9 @@ void AssetLoader::loadTextures()
 	{
 		switch (loadProgress)
 		{
+			case 0:
+				textureNames[0] = "DefaultTexture";
+				break;
 			case 1:
 				// textures[1] = LoadTexture("");
 				// textureNames[1] = "";
@@ -63,7 +64,7 @@ void AssetLoader::loadTextures()
 	}
 }
 
-Texture2D& AssetLoader::getTexture(std::string t_name)
+Texture2D& AssetHandler::getTexture(std::string t_name)
 {
 	for (int i = 0; i < TOTAL_TEXTURE_COUNT; i++)
 	{
@@ -75,12 +76,12 @@ Texture2D& AssetLoader::getTexture(std::string t_name)
 	return defaultTexture;
 }
 
-void AssetLoader::unloadTextures()
+void AssetHandler::unloadTextures()
 {
 	for (int i = 0; i < TOTAL_TEXTURE_COUNT; i++){UnloadTexture(textures[i]);}
 }
 
-void AssetLoader::drawLoadScreen()
+void AssetHandler::drawLoadScreen()
 {
 	DrawRectangle(200, 320, loadProgress * (560 / TOTAL_TEXTURE_COUNT), 15, GREEN);
 }

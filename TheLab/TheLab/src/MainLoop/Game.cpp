@@ -26,7 +26,7 @@ void Game::Run()
 
 void Game::Init()
 {
-	assetLoader = new AssetLoader;
+	assetHandler = new AssetHandler;
 	gameObjects = new GameObjects;
 	gameObjects->init();
 }
@@ -62,7 +62,7 @@ void Game::Update(float t_dt)
 	switch (gameState)
 	{
 		case GS_LOADING:
-			assetLoader->loadTextures();
+			assetHandler->loadTextures();
 		break;
 		case GS_START:
 		break;
@@ -81,7 +81,7 @@ void Game::Draw()
 	switch (gameState)
 	{
 		case GS_LOADING:
-			assetLoader->drawLoadScreen();
+			assetHandler->drawLoadScreen();
 		break;
 		case GS_START:
 		break;
@@ -98,8 +98,8 @@ void Game::Draw()
 
 void Game::FreeResources()
 {
-	assetLoader->unloadTextures();
-	delete(assetLoader);
+	assetHandler->unloadTextures();
+	delete(assetHandler);
 	delete(gameObjects);
 	UnloadRenderTexture(gameWindow);
 }

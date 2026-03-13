@@ -1,14 +1,14 @@
-#ifndef ASSETLOADER_HPP
-#define ASSETLOADER_HPP
+#ifndef ASSETHANDLER_HPP
+#define ASSETHANDLER_HPP
 
 #include <raylib.h>
 #include <string>
 
-class AssetLoader
+class AssetHandler
 {
 public:
-	AssetLoader();
-	~AssetLoader();
+	AssetHandler();
+	~AssetHandler();
 
 	void loadTextures();
 	Texture2D& getTexture(std::string t_name);

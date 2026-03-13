@@ -19,7 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="include\AssetLoader.hpp" />
+    <ClInclude Include="include\AssetHandler.hpp" />
     <ClInclude Include="include\Constants\Constants.hpp" />
     <ClInclude Include="include\Enums\Commands.h" />
     <ClInclude Include="include\Enums\GameStates.h" />
@@ -27,7 +27,7 @@
     <ClInclude Include="include\MainLoop\Game.hpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\AssetLoader.cpp" />
+    <ClCompile Include="src\AssetHandler.cpp" />
     <ClCompile Include="src\GameObjects.cpp" />
     <ClCompile Include="src\MainLoop\Game.cpp" />
     <ClCompile Include="src\MainLoop\main.cpp" />

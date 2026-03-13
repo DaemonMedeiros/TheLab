@@ -4,7 +4,7 @@
 #include <raylib.h>
 #include "../Enums/GameStates.h"
 #include "../Constants/Constants.hpp"
-#include "../AssetLoader.hpp"
+#include "../AssetHandler.hpp"
 #include "../GameObjects.hpp"
 
 class Game
@@ -27,7 +27,7 @@ private:
 	int gameScreenWidth{ SCREEN_WIDTH };
 	int gameScreenHeight{ SCREEN_HEIGHT };
 
-	AssetLoader* assetLoader { nullptr };
+	AssetHandler* assetHandler { nullptr };
 	GameObjects* gameObjects { nullptr };
 	GameState gameState{ GS_LOADING };
 };

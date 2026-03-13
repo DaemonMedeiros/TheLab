@@ -42,10 +42,10 @@
     <ClInclude Include="include\Constants\Constants.hpp">
       <Filter>Header Files\Constants</Filter>
     </ClInclude>
-    <ClInclude Include="include\AssetLoader.hpp">
+    <ClInclude Include="include\GameObjects.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\GameObjects.hpp">
+    <ClInclude Include="include\AssetHandler.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -56,10 +56,10 @@
     <ClCompile Include="src\MainLoop\main.cpp">
       <Filter>Source Files\MainLoop</Filter>
     </ClCompile>
-    <ClCompile Include="src\AssetLoader.cpp">
+    <ClCompile Include="src\GameObjects.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\GameObjects.cpp">
+    <ClCompile Include="src\AssetHandler.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
