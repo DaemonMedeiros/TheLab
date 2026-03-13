@@ -34,6 +34,18 @@
     <Filter Include="Source Files\Handlers">
       <UniqueIdentifier>{a79ba936-f3fb-4838-b796-715dbe3dcdf6}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Resource Files\textures\placeholders">
+      <UniqueIdentifier>{7f23a4cf-ea8f-43a3-8de0-16628f10052f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\textures\placeholders\levels">
+      <UniqueIdentifier>{c27aed5c-008b-45a1-8b8d-6e58c639dc5c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\textures\placeholders\gameplay">
+      <UniqueIdentifier>{1a9ef42b-4f38-4659-a088-f644da5e1e48}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\textures\placeholders\screens">
+      <UniqueIdentifier>{3802e003-7ef2-4cbb-b346-6b1e9a887642}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\Enums\Commands.h">
@@ -84,6 +96,78 @@
   <ItemGroup>
     <Image Include="resources\textures\default.jpeg">
       <Filter>Resource Files\textures</Filter>
+    </Image>
+    <Image Include="resources\textures\placeholders\levels\11_Castle_PH.jpg">
+      <Filter>Resource Files\textures\placeholders\levels</Filter>
+    </Image>
+    <Image Include="resources\textures\placeholders\levels\4_CliffsidePath_PH.jpg">
+      <Filter>Resource Files\textures\placeholders\levels</Filter>
+    </Image>
+    <Image Include="resources\textures\placeholders\levels\1_Cottage_PH.jpg">
+      <Filter>Resource Files\textures\placeholders\levels</Filter>
+    </Image>
+    <Image Include="resources\textures\placeholders\levels\5_EnemyCamp1_PH.jpg">
+      <Filter>Resource Files\textures\placeholders\levels</Filter>
+    </Image>
+    <Image Include="resources\textures\placeholders\levels\7_EnemyCamp2_PH.jpg">
+      <Filter>Resource Files\textures\placeholders\levels</Filter>
+    </Image>
+    <Image Include="resources\textures\placeholders\levels\9_EnemyCamp3_PH.jpg">
+      <Filter>Resource Files\textures\placeholders\levels</Filter>
+    </Image>
+    <Image Include="resources\textures\placeholders\levels\2_ForestPath_PH.jpg">
+      <Filter>Resource Files\textures\placeholders\levels</Filter>
+    </Image>
+    <Image Include="resources\textures\placeholders\levels\3_Lighthouse_PH.jpg">
+      <Filter>Resource Files\textures\placeholders\levels</Filter>
+    </Image>
+    <Image Include="resources\textures\placeholders\levels\8_MtnPeaks_PH.jpg">
+      <Filter>Resource Files\textures\placeholders\levels</Filter>
+    </Image>
+    <Image Include="resources\textures\placeholders\levels\10_SeaCaves_PH.jpg">
+      <Filter>Resource Files\textures\placeholders\levels</Filter>
+    </Image>
+    <Image Include="resources\textures\placeholders\levels\6_SnowForest_PH.jpg">
+      <Filter>Resource Files\textures\placeholders\levels</Filter>
+    </Image>
+    <Image Include="resources\textures\placeholders\gameplay\1_Inventory_PH.jpg">
+      <Filter>Resource Files\textures\placeholders\gameplay</Filter>
+    </Image>
+    <Image Include="resources\textures\placeholders\gameplay\5_Knockout_PH.jpg">
+      <Filter>Resource Files\textures\placeholders\gameplay</Filter>
+    </Image>
+    <Image Include="resources\textures\placeholders\gameplay\4_SecretShop_PH.jpg">
+      <Filter>Resource Files\textures\placeholders\gameplay</Filter>
+    </Image>
+    <Image Include="resources\textures\placeholders\gameplay\2_Shop1_PH.jpg">
+      <Filter>Resource Files\textures\placeholders\gameplay</Filter>
+    </Image>
+    <Image Include="resources\textures\placeholders\gameplay\3_Shop2_PH.jpg">
+      <Filter>Resource Files\textures\placeholders\gameplay</Filter>
+    </Image>
+    <Image Include="resources\textures\placeholders\screens\8_Credits_PH.jpg">
+      <Filter>Resource Files\textures\placeholders\screens</Filter>
+    </Image>
+    <Image Include="resources\textures\placeholders\screens\7_GameEnd_PH.jpg">
+      <Filter>Resource Files\textures\placeholders\screens</Filter>
+    </Image>
+    <Image Include="resources\textures\placeholders\screens\2_InitObjects_PH.jpg">
+      <Filter>Resource Files\textures\placeholders\screens</Filter>
+    </Image>
+    <Image Include="resources\textures\placeholders\screens\1_LoadingTextures_PH.jpg">
+      <Filter>Resource Files\textures\placeholders\screens</Filter>
+    </Image>
+    <Image Include="resources\textures\placeholders\screens\5_Pause_PH.jpg">
+      <Filter>Resource Files\textures\placeholders\screens</Filter>
+    </Image>
+    <Image Include="resources\textures\placeholders\screens\6_Settings_PH.jpg">
+      <Filter>Resource Files\textures\placeholders\screens</Filter>
+    </Image>
+    <Image Include="resources\textures\placeholders\screens\3_StartMenu_PH.jpg">
+      <Filter>Resource Files\textures\placeholders\screens</Filter>
+    </Image>
+    <Image Include="resources\textures\placeholders\screens\4_Gameplay_PH.jpg">
+      <Filter>Resource Files\textures\placeholders\screens</Filter>
     </Image>
   </ItemGroup>
 </Project>

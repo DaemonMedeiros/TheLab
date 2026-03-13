@@ -38,6 +38,30 @@
   </ItemGroup>
   <ItemGroup>
     <Image Include="resources\textures\default.jpeg" />
+    <Image Include="resources\textures\placeholders\gameplay\1_Inventory_PH.jpg" />
+    <Image Include="resources\textures\placeholders\gameplay\5_Knockout_PH.jpg" />
+    <Image Include="resources\textures\placeholders\gameplay\4_SecretShop_PH.jpg" />
+    <Image Include="resources\textures\placeholders\gameplay\2_Shop1_PH.jpg" />
+    <Image Include="resources\textures\placeholders\gameplay\3_Shop2_PH.jpg" />
+    <Image Include="resources\textures\placeholders\levels\11_Castle_PH.jpg" />
+    <Image Include="resources\textures\placeholders\levels\4_CliffsidePath_PH.jpg" />
+    <Image Include="resources\textures\placeholders\levels\1_Cottage_PH.jpg" />
+    <Image Include="resources\textures\placeholders\levels\5_EnemyCamp1_PH.jpg" />
+    <Image Include="resources\textures\placeholders\levels\7_EnemyCamp2_PH.jpg" />
+    <Image Include="resources\textures\placeholders\levels\9_EnemyCamp3_PH.jpg" />
+    <Image Include="resources\textures\placeholders\levels\2_ForestPath_PH.jpg" />
+    <Image Include="resources\textures\placeholders\levels\3_Lighthouse_PH.jpg" />
+    <Image Include="resources\textures\placeholders\levels\8_MtnPeaks_PH.jpg" />
+    <Image Include="resources\textures\placeholders\levels\10_SeaCaves_PH.jpg" />
+    <Image Include="resources\textures\placeholders\levels\6_SnowForest_PH.jpg" />
+    <Image Include="resources\textures\placeholders\screens\4_Gameplay_PH.jpg" />
+    <Image Include="resources\textures\placeholders\screens\8_Credits_PH.jpg" />
+    <Image Include="resources\textures\placeholders\screens\7_GameEnd_PH.jpg" />
+    <Image Include="resources\textures\placeholders\screens\2_InitObjects_PH.jpg" />
+    <Image Include="resources\textures\placeholders\screens\1_LoadingTextures_PH.jpg" />
+    <Image Include="resources\textures\placeholders\screens\5_Pause_PH.jpg" />
+    <Image Include="resources\textures\placeholders\screens\6_Settings_PH.jpg" />
+    <Image Include="resources\textures\placeholders\screens\3_StartMenu_PH.jpg" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>

@@ -15,51 +15,16 @@ void AssetHandler::loadTextures()
 {
 	if (loadProgress == 0) { std::cout << "AssetHandler : Loading Textures\n"; }
 	if (loadProgress == TOTAL_TEXTURE_COUNT) 
-	{ finishedLoading = true; /*std::cout << "AssetHandler : Loading Textures Complete\n"; */}
+	{ 
+		if (!finishedLoading)
+		{
+			finishedLoading = true; 
+			std::cout << "AssetHandler : Loading Textures Complete\n";
+		}
+	}
 	else
 	{
-		switch (loadProgress)
-		{
-			case 0:
-				textureNames[0] = "DefaultTexture";
-				break;
-			case 1:
-				// textures[1] = LoadTexture("");
-				// textureNames[1] = "";
-				break;
-			case 2:
-				// textures[2] = LoadTexture("");
-				// textureNames[2] = "";
-				break;
-			case 3:
-				// textures[3] = LoadTexture("");
-				// textureNames[3] = "";
-				break;
-			case 4:
-				// textures[4] = LoadTexture("");
-				// textureNames[4] = "";
-				break;
-			case 5:
-				// textures[5] = LoadTexture("");
-				// textureNames[5] = "";
-				break;
-			case 6:
-				// textures[6] = LoadTexture("");
-				// textureNames[6] = "";
-				break;
-			case 7:
-				// textures[7] = LoadTexture("");
-				// textureNames[7] = "";
-				break;
-			case 8:
-				// textures[8] = LoadTexture("");
-				// textureNames[8] = "";
-				break;
-			case 9:
-				// textures[9] = LoadTexture("");
-				// textureNames[9] = "";
-				break;
-		}
+		loadScreenTextures();
 		loadProgress++;
 	}
 }
@@ -86,4 +51,46 @@ void AssetHandler::unloadTextures()
 void AssetHandler::drawLoadScreen()
 {
 	DrawRectangle(200, 320, loadProgress * (560 / TOTAL_TEXTURE_COUNT), 15, GREEN);
+}
+
+void AssetHandler::loadScreenTextures()
+{
+	switch (loadProgress)
+	{
+	case 0:
+		textureNames[0] = "DefaultTexture";
+		break;
+	case 1:
+		textures[1] = LoadTexture("./resources/textures/placeholders/screens/1_LoadingTextures_PH.jpg");
+		textureNames[1] = "LoadingTextures";
+		break;
+	case 2:
+		textures[2] = LoadTexture("./resources/textures/placeholders/screens/2_InitObjects_PH.jpg");
+		textureNames[2] = "InitObjects";
+		break;
+	case 3:
+		textures[3] = LoadTexture("./resources/textures/placeholders/screens/3_StartMenu_PH.jpg");
+		textureNames[3] = "StartMenu";
+		break;
+	case 4:
+		textures[4] = LoadTexture("./resources/textures/placeholders/screens/4_Gameplay_PH.jpg");
+		textureNames[4] = "Gameplay";
+		break;
+	case 5:
+		textures[5] = LoadTexture("./resources/textures/placeholders/screens/5_Pause_PH.jpg");
+		textureNames[5] = "Pause";
+		break;
+	case 6:
+		textures[6] = LoadTexture("./resources/textures/placeholders/screens/6_Settings_PH.jpg");
+		textureNames[6] = "Settings";
+		break;
+	case 7:
+		textures[7] = LoadTexture("./resources/textures/placeholders/screens/7_GameEnd_PH.jpg");
+		textureNames[7] = "GameEnd";
+		break;
+	case 8:
+		textures[8] = LoadTexture("./resources/textures/placeholders/screens/8_Credits_PH.jpg");
+		textureNames[8] = "Credits";
+		break;
+	}
 }
