@@ -2,16 +2,14 @@
 
 AssetLoader::AssetLoader()
 {
-	for (int i = 0; i < TOTAL_TEXTURE_COUNT; i++){textures[i] = defaultTexture;}
+	textures[0] = defaultTexture;
+	textureNames[0] = "DefaultTexture";
+	for (int i = 1; i < TOTAL_TEXTURE_COUNT; i++) { textures[i] = defaultTexture; textureNames[0] = '\0'; }
+	loadProgress++;
 }
 
 AssetLoader::~AssetLoader()
 {
-}
-
-bool AssetLoader::texturesLoaded()
-{
-	return finishedLoading;
 }
 
 void AssetLoader::loadTextures()
@@ -24,10 +22,6 @@ void AssetLoader::loadTextures()
 	{
 		switch (loadProgress)
 		{
-			case 0:
-				// textures[0] = LoadTexture("");
-				// textureNames[0] = "";
-				break;
 			case 1:
 				// textures[1] = LoadTexture("");
 				// textureNames[1] = "";
@@ -69,7 +63,24 @@ void AssetLoader::loadTextures()
 	}
 }
 
-void AssetLoader::drawProgressBar()
+Texture2D& AssetLoader::getTexture(std::string t_name)
+{
+	for (int i = 0; i < TOTAL_TEXTURE_COUNT; i++)
+	{
+		if (t_name == textureNames[i])
+		{
+			return textures[i];
+		}
+	}
+	return defaultTexture;
+}
+
+void AssetLoader::unloadTextures()
+{
+	for (int i = 0; i < TOTAL_TEXTURE_COUNT; i++){UnloadTexture(textures[i]);}
+}
+
+void AssetLoader::drawLoadScreen()
 {
 	DrawRectangle(200, 320, loadProgress * (560 / TOTAL_TEXTURE_COUNT), 15, GREEN);
 }

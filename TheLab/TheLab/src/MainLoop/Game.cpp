@@ -1,6 +1,6 @@
 #include "../../include/MainLoop/Game.hpp"
 
-Game::Game(AssetLoader& t_assetLoader) : assetLoader(t_assetLoader)
+Game::Game()
 {
 }
 
@@ -10,68 +10,96 @@ Game::~Game()
 
 void Game::Run()
 {
+	SetConfigFlags(FLAG_WINDOW_RESIZABLE | FLAG_VSYNC_HINT);
 	InitWindow(SCREEN_WIDTH, SCREEN_HEIGHT, "Raylib Template");
-	SetWindowMinSize(SCREEN_WIDTH, SCREEN_HEIGHT);
-	SetTargetFPS(TARGET_FPS);
+	InitRenderWindow();
 	Init();
-
 	while (!WindowShouldClose())
 	{
 		float deltaTime = GetFrameTime();
-		if (!texturesLoaded)
-		{
-			assetLoader.loadTextures();
-		}
-		else
-		{
-			Update(deltaTime);
-		}
-		ScaleAndRenderWindow();
+		Update(deltaTime);
+		DrawRenderWindow();
 	}
+	FreeResources();
 	CloseWindow();
 }
 
 void Game::Init()
 {
-	appWindow = LoadRenderTexture(SCREEN_WIDTH, SCREEN_HEIGHT);
-	SetTextureFilter(appWindow.texture, TEXTURE_FILTER_BILINEAR);
-	appWindowScale = { (float)GetScreenWidth() / gameScreenWidth, (float)GetScreenHeight() / gameScreenHeight };
-
-	gameObjects.init();
+	assetLoader = new AssetLoader;
+	gameObjects = new GameObjects;
+	gameObjects->init();
 }
 
-void Game::ScaleAndRenderWindow()
+void Game::InitRenderWindow()
 {
-	BeginTextureMode(appWindow);
+	SetWindowMinSize(SCREEN_WIDTH, SCREEN_HEIGHT);
+	gameWindow = LoadRenderTexture(SCREEN_WIDTH, SCREEN_HEIGHT);
+	SetTextureFilter(gameWindow.texture, TEXTURE_FILTER_BILINEAR);
+	SetTargetFPS(TARGET_FPS);
+}
+
+void Game::DrawRenderWindow()
+{
+	gameWindowScale = { (float)GetScreenWidth() / gameScreenWidth, (float)GetScreenHeight() / gameScreenHeight };
+	BeginTextureMode(gameWindow);
 	ClearBackground(RAYWHITE);
 	// ----
-	if (!texturesLoaded)
-	{
-		assetLoader.drawProgressBar();
-	}
-	else
-	{
 		Draw();
-	}
 	// ----
 	EndTextureMode();
 	BeginDrawing();
 	ClearBackground(BLACK);
-	DrawTexturePro(appWindow.texture,
-		{ 0.0f, 0.0f, (float)appWindow.texture.width, (float)-appWindow.texture.height },
-		{ (GetScreenWidth() - ((float)gameScreenWidth * appWindowScale.x)) * 0.5f, (GetScreenHeight() - ((float)gameScreenHeight * appWindowScale.y)) * 0.5f,
-		(float)gameScreenWidth * appWindowScale.x, (float)gameScreenHeight * appWindowScale.y }, { 0.0f, 0.0f }, 0.0f, WHITE);
+	DrawTexturePro(gameWindow.texture,
+		{ 0.0f, 0.0f, (float)gameWindow.texture.width, (float)-gameWindow.texture.height },
+		{ (GetScreenWidth() - ((float)gameScreenWidth * gameWindowScale.x)) * 0.5f, (GetScreenHeight() - ((float)gameScreenHeight * gameWindowScale.y)) * 0.5f,
+		(float)gameScreenWidth * gameWindowScale.x, (float)gameScreenHeight * gameWindowScale.y }, { 0.0f, 0.0f }, 0.0f, WHITE);
 	EndDrawing();
 }
 
 void Game::Update(float t_dt)
 {
-	
-	appWindowScale = { (float)GetScreenWidth() / gameScreenWidth, (float)GetScreenHeight() / gameScreenHeight };
-	gameObjects.update();
+	switch (gameState)
+	{
+		case GS_LOADING:
+			assetLoader->loadTextures();
+		break;
+		case GS_START:
+		break;
+		case GS_PLAY:
+			gameObjects->update();
+		break;
+		case GS_PAUSE:
+		break;
+		case GS_END:
+		break;
+	}
 }
 
 void Game::Draw()
 {
-	gameObjects.draw();
+	switch (gameState)
+	{
+		case GS_LOADING:
+			assetLoader->drawLoadScreen();
+		break;
+		case GS_START:
+		break;
+		case GS_PLAY:
+			gameObjects->draw();
+		break;
+		case GS_PAUSE:
+			gameObjects->draw();
+		break;
+		case GS_END:
+		break;
+	}
+}
+
+void Game::FreeResources()
+{
+	assetLoader->unloadTextures();
+	delete(assetLoader);
+	delete(gameObjects);
+	UnloadRenderTexture(gameWindow);
 }

@@ -10,15 +10,16 @@ public:
 	AssetLoader();
 	~AssetLoader();
 
-	bool texturesLoaded();
 	void loadTextures();
-	void drawProgressBar();
+	Texture2D& getTexture(std::string t_name);
+	void unloadTextures();
+	void drawLoadScreen();
 
 private:
-	static const int TOTAL_TEXTURE_COUNT{ 10 };
+	Texture2D defaultTexture{ LoadTexture("./resources/textures/default.jpeg") };
 
+	static const int TOTAL_TEXTURE_COUNT{ 10 };
 	std::string textureNames[TOTAL_TEXTURE_COUNT];
-	Texture2D defaultTexture{ LoadTexture("../resources/texture/default.jpeg") };
 	Texture2D textures[TOTAL_TEXTURE_COUNT];
 	int loadProgress{ 0 };
 	bool finishedLoading{ false };

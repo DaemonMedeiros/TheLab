@@ -1,10 +1,13 @@
+#include <cstdlib>
+#include <ctime>
+
 #include "../../include/MainLoop/Game.hpp"
 #include "../../include/AssetLoader.hpp"
 
 int main()
 {
-	AssetLoader assetLoader;
-	Game game(assetLoader);
+	srand(time(nullptr));
+	Game game;
 	game.Run();
 	return 0;
 }
