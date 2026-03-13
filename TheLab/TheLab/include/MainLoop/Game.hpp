@@ -4,8 +4,8 @@
 #include <raylib.h>
 #include "../Enums/GameStates.h"
 #include "../Constants/Constants.hpp"
-#include "../AssetHandler.hpp"
-#include "../UIHandler.hpp"
+#include "../Handlers/AssetHandler.hpp"
+#include "../Handlers/UIHandler.hpp"
 #include "../GameObjects.hpp"
 
 class Game

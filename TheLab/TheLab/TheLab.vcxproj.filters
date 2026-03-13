@@ -28,6 +28,12 @@
     <Filter Include="Resource Files\textures">
       <UniqueIdentifier>{aa1ea140-c5ff-4fae-b554-8a770f18aaa7}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\Handlers">
+      <UniqueIdentifier>{df0356b5-1347-45e7-85e7-c39e8bd5cc64}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Handlers">
+      <UniqueIdentifier>{a79ba936-f3fb-4838-b796-715dbe3dcdf6}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\Enums\Commands.h">
@@ -45,11 +51,11 @@
     <ClInclude Include="include\GameObjects.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\AssetHandler.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="include\Handlers\AssetHandler.hpp">
+      <Filter>Header Files\Handlers</Filter>
     </ClInclude>
-    <ClInclude Include="include\UIHandler.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="include\Handlers\UIHandler.hpp">
+      <Filter>Header Files\Handlers</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -62,11 +68,11 @@
     <ClCompile Include="src\GameObjects.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\AssetHandler.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="src\Handlers\AssetHandler.cpp">
+      <Filter>Source Files\Handlers</Filter>
     </ClCompile>
-    <ClCompile Include="src\UIHandler.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="src\Handlers\UIHandler.cpp">
+      <Filter>Source Files\Handlers</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

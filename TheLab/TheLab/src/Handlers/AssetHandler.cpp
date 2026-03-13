@@ -1,4 +1,4 @@
-#include "../include/AssetHandler.hpp"
+#include "../../include/Handlers/AssetHandler.hpp"
 
 AssetHandler::AssetHandler()
 {
@@ -14,7 +14,8 @@ AssetHandler::~AssetHandler()
 void AssetHandler::loadTextures()
 {
 	if (loadProgress == 0) { std::cout << "AssetHandler : Loading Textures\n"; }
-	if (loadProgress == TOTAL_TEXTURE_COUNT){ finishedLoading = true; std::cout << "AssetHandler : Loading Textures Complete\n";}
+	if (loadProgress == TOTAL_TEXTURE_COUNT) 
+	{ finishedLoading = true; /*std::cout << "AssetHandler : Loading Textures Complete\n"; */}
 	else
 	{
 		switch (loadProgress)

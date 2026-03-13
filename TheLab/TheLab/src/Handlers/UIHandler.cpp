@@ -1,4 +1,4 @@
-#include "../include/UIHandler.hpp"
+#include "../../include/Handlers/UIHandler.hpp"
 
 UIHandler::UIHandler()
 {
@@ -14,9 +14,9 @@ void UIHandler::update(double& t_dt, Command& t_command, GameState& t_gamestate)
 {
 	if (t_gamestate != activeUI)
 	{
-		exitUIState(t_gamestate);
+		takedownUI(t_gamestate);
 		activeUI = t_gamestate;
-		enterUIState(t_gamestate);
+		setupUI(t_gamestate);
 	}
 	else
 	{
@@ -53,7 +53,7 @@ void UIHandler::draw(GameState& t_gamestate)
 	}
 }
 
-void UIHandler::exitUIState(GameState& t_gamestate)
+void UIHandler::setupUI(GameState& t_gamestate)
 {
 	switch (t_gamestate)
 	{
@@ -70,7 +70,7 @@ void UIHandler::exitUIState(GameState& t_gamestate)
 	}
 }
 
-void UIHandler::enterUIState(GameState& t_gamestate)
+void UIHandler::takedownUI(GameState& t_gamestate)
 {
 	switch (t_gamestate)
 	{

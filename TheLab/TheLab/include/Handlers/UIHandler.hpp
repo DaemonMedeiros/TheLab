@@ -3,8 +3,8 @@
 
 #include <iostream>
 
-#include "../include/Enums/GameStates.h"
-#include "../include/Enums/Commands.h"
+#include "../../include/Enums/GameStates.h"
+#include "../../include/Enums/Commands.h"
 
 class UIHandler
 {
@@ -17,9 +17,9 @@ public:
 
 private:
 
-	void exitUIState(GameState& t_gamestate);
-	void enterUIState(GameState& t_gamestate);
+	void setupUI(GameState& t_gamestate);
+	void takedownUI(GameState& t_gamestate);
 
-	GameState activeUI;
+	GameState activeUI{ GS_LOADING };
 };
 #endif
