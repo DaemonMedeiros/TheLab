@@ -1,6 +1,6 @@
 #include "../include/GameObjects.hpp"
 
-GameObjects::GameObjects()
+GameObjects::GameObjects(AssetHandler* t_assetHandler) : assetHandler(t_assetHandler)
 {
 	std::cout << "GameObjects : Object Created\n";
 }
@@ -15,7 +15,7 @@ void GameObjects::init()
 	// initialize set up for game objects here
 }
 
-void GameObjects::update(double t_dt, Command& t_command)
+void GameObjects::update(float& t_dt, Command& t_command)
 {
 	// update game objects here
 }

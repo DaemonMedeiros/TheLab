@@ -3,16 +3,17 @@
 
 #include <iostream>
 
+#include "../../include/Handlers/AssetHandler.hpp"
 #include "../../include/Enums/GameStates.h"
 #include "../../include/Enums/Commands.h"
 
 class UIHandler
 {
 public:
-	UIHandler();
+	UIHandler(AssetHandler* t_assetHandler);
 	~UIHandler();
 
-	void update(double& t_dt, Command& t_command, GameState& t_gamestate);
+	void update(float& t_dt, Command& t_command, GameState& t_gamestate);
 	void draw(GameState& t_gamestate);
 
 private:
@@ -20,6 +21,7 @@ private:
 	void setupUI(GameState& t_gamestate);
 	void takedownUI(GameState& t_gamestate);
 
+	AssetHandler* assetHandler{ nullptr };
 	GameState activeUI{ GS_LOADING };
 };
 #endif

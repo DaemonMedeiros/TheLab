@@ -29,8 +29,8 @@ void Game::Run()
 void Game::Init()
 {
 	assetHandler = new AssetHandler;
-	uiHandler = new UIHandler;
-	gameObjects = new GameObjects;
+	uiHandler = new UIHandler (assetHandler);
+	gameObjects = new GameObjects (assetHandler);
 	gameObjects->init();
 }
 
@@ -63,8 +63,9 @@ void Game::DrawRenderWindow()
 void Game::Update(float& t_dt)
 {
 	activeCommand = inputHandler.getActiveCommand();
+	uiHandler->update(t_dt, activeCommand, gamestate);
 	
-	switch (gameState)
+	switch (gamestate)
 	{
 		case GS_LOADING:
 			assetHandler->loadTextures();
@@ -83,7 +84,7 @@ void Game::Update(float& t_dt)
 
 void Game::Draw()
 {
-	switch (gameState)
+	switch (gamestate)
 	{
 		case GS_LOADING:
 			assetHandler->drawLoadScreen();

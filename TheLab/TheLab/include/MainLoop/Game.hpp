@@ -33,7 +33,7 @@ private:
 	UIHandler* uiHandler{ nullptr };
 	GameObjects* gameObjects { nullptr };
 	InputHandler inputHandler;
-	GameState gameState{ GS_LOADING };
+	GameState gamestate{ GS_LOADING };
 	Command activeCommand{ CMD_NONE };
 };
 #endif

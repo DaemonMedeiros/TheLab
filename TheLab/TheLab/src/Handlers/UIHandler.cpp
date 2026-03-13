@@ -1,7 +1,8 @@
 #include "../../include/Handlers/UIHandler.hpp"
 
-UIHandler::UIHandler()
+UIHandler::UIHandler(AssetHandler* t_assetHandler) : assetHandler(t_assetHandler)
 {
+	setupUI(activeUI);
 	std::cout << "UIHandler : Object Created\n";
 }
 
@@ -10,7 +11,7 @@ UIHandler::~UIHandler()
 	std::cout << "UIHandler : Object Destroyed\n";
 }
 
-void UIHandler::update(double& t_dt, Command& t_command, GameState& t_gamestate)
+void UIHandler::update(float& t_dt, Command& t_command, GameState& t_gamestate)
 {
 	if (t_gamestate != activeUI)
 	{
