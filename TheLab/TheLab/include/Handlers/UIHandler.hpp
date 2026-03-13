@@ -22,6 +22,6 @@ private:
 	void takedownUI(GameState& t_gamestate);
 
 	AssetHandler* assetHandler{ nullptr };
-	GameState activeUI{ GS_LOADING };
+	GameState activeUI{ GS_LOADING_TEXTURES };
 };
 #endif

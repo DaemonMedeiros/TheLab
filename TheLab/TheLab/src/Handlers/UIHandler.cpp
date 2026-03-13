@@ -23,7 +23,9 @@ void UIHandler::update(float& t_dt, Command& t_command, GameState& t_gamestate)
 	{
 		switch (t_gamestate)
 		{
-			case GS_LOADING:
+			case GS_LOADING_TEXTURES:
+				break;
+			case GS_INIT_OBJECTS:
 				break;
 			case GS_START:
 				break;
@@ -41,7 +43,9 @@ void UIHandler::draw(GameState& t_gamestate)
 {
 	switch (t_gamestate)
 	{
-		case GS_LOADING:
+		case GS_LOADING_TEXTURES:
+			break;
+		case GS_INIT_OBJECTS:
 			break;
 		case GS_START:
 			break;
@@ -58,7 +62,9 @@ void UIHandler::setupUI(GameState& t_gamestate)
 {
 	switch (t_gamestate)
 	{
-		case GS_LOADING:
+		case GS_LOADING_TEXTURES:
+			break;
+		case GS_INIT_OBJECTS:
 			break;
 		case GS_START:
 			break;
@@ -75,7 +81,9 @@ void UIHandler::takedownUI(GameState& t_gamestate)
 {
 	switch (t_gamestate)
 	{
-		case GS_LOADING:
+		case GS_LOADING_TEXTURES:
+			break;
+		case GS_INIT_OBJECTS:
 			break;
 		case GS_START:
 			break;

@@ -5,7 +5,7 @@
 
 int main()
 {
-	srand(time(nullptr));
+	srand(time(NULL));
 	Game game;
 	game.Run();
 	return 0;

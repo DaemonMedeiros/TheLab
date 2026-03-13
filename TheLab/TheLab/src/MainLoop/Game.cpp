@@ -67,9 +67,11 @@ void Game::Update(float& t_dt)
 	
 	switch (gamestate)
 	{
-		case GS_LOADING:
+		case GS_LOADING_TEXTURES:
 			assetHandler->loadTextures();
 		break;
+		case GS_INIT_OBJECTS:
+			break;
 		case GS_START:
 		break;
 		case GS_PLAY:
@@ -86,9 +88,11 @@ void Game::Draw()
 {
 	switch (gamestate)
 	{
-		case GS_LOADING:
+		case GS_LOADING_TEXTURES:
 			assetHandler->drawLoadScreen();
 		break;
+		case GS_INIT_OBJECTS:
+			break;
 		case GS_START:
 		break;
 		case GS_PLAY:
