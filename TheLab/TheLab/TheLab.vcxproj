@@ -25,12 +25,14 @@
     <ClInclude Include="include\Enums\GameStates.h" />
     <ClInclude Include="include\GameObjects.hpp" />
     <ClInclude Include="include\MainLoop\Game.hpp" />
+    <ClInclude Include="include\UIHandler.hpp" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\AssetHandler.cpp" />
     <ClCompile Include="src\GameObjects.cpp" />
     <ClCompile Include="src\MainLoop\Game.cpp" />
     <ClCompile Include="src\MainLoop\main.cpp" />
+    <ClCompile Include="src\UIHandler.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="resources\textures\default.jpeg" />

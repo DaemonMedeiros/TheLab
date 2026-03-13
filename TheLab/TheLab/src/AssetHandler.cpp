@@ -2,20 +2,19 @@
 
 AssetHandler::AssetHandler()
 {
+	std::cout << "GameObjects : Object Created\n";
 	for (int i = 0; i < TOTAL_TEXTURE_COUNT; i++) { textures[i] = defaultTexture; }
-	loadProgress++;
 }
 
 AssetHandler::~AssetHandler()
 {
+	std::cout << "AssetHandler : Object Destroyed\n";
 }
 
 void AssetHandler::loadTextures()
 {
-	if (loadProgress == TOTAL_TEXTURE_COUNT)
-	{
-		finishedLoading = true;
-	}
+	if (loadProgress == 0) { std::cout << "AssetHandler : Loading Textures\n"; }
+	if (loadProgress == TOTAL_TEXTURE_COUNT){ finishedLoading = true; std::cout << "AssetHandler : Loading Textures Complete\n";}
 	else
 	{
 		switch (loadProgress)
@@ -78,7 +77,9 @@ Texture2D& AssetHandler::getTexture(std::string t_name)
 
 void AssetHandler::unloadTextures()
 {
+	std::cout << "AssetHandler : Unloading Textures\n";
 	for (int i = 0; i < TOTAL_TEXTURE_COUNT; i++){UnloadTexture(textures[i]);}
+	std::cout << "AssetHandler : Textures Unloaded\n";
 }
 
 void AssetHandler::drawLoadScreen()

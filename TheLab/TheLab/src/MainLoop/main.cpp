@@ -2,7 +2,6 @@
 #include <ctime>
 
 #include "../../include/MainLoop/Game.hpp"
-#include "../../include/AssetHandler.hpp"
 
 int main()
 {

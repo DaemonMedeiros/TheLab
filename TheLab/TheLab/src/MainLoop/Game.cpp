@@ -2,10 +2,12 @@
 
 Game::Game()
 {
+	std::cout << "Game : Object Created\n";
 }
 
 Game::~Game()
 {
+	std::cout << "Game : Object Destroyed\n";
 }
 
 void Game::Run()
@@ -27,6 +29,7 @@ void Game::Run()
 void Game::Init()
 {
 	assetHandler = new AssetHandler;
+	uiHandler = new UIHandler;
 	gameObjects = new GameObjects;
 	gameObjects->init();
 }
@@ -100,6 +103,7 @@ void Game::FreeResources()
 {
 	assetHandler->unloadTextures();
 	delete(assetHandler);
+	delete(uiHandler);
 	delete(gameObjects);
 	UnloadRenderTexture(gameWindow);
 }

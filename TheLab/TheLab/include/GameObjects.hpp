@@ -1,5 +1,8 @@
 #ifndef GAMEOBJECTS_HPP
 #define GAMEOBJECTS_HPP
+
+#include <iostream>
+
 class GameObjects
 {
 public:

@@ -5,6 +5,7 @@
 #include "../Enums/GameStates.h"
 #include "../Constants/Constants.hpp"
 #include "../AssetHandler.hpp"
+#include "../UIHandler.hpp"
 #include "../GameObjects.hpp"
 
 class Game
@@ -28,6 +29,7 @@ private:
 	int gameScreenHeight{ SCREEN_HEIGHT };
 
 	AssetHandler* assetHandler { nullptr };
+	UIHandler* uiHandler{ nullptr };
 	GameObjects* gameObjects { nullptr };
 	GameState gameState{ GS_LOADING };
 };

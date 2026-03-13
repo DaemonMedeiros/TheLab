@@ -2,10 +2,12 @@
 
 GameObjects::GameObjects()
 {
+	std::cout << "GameObjects : Object Created\n";
 }
 
 GameObjects::~GameObjects()
 {
+	std::cout << "GameObjects : Object Destroyed\n";
 }
 
 void GameObjects::init()
