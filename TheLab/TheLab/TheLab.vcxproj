@@ -23,14 +23,14 @@
     <ClInclude Include="include\Enums\Commands.h" />
     <ClInclude Include="include\Enums\GameStates.h" />
     <ClInclude Include="include\Enums\PlayerId.h" />
-    <ClInclude Include="include\GameObjects.hpp" />
+    <ClInclude Include="include\GameObjects\GameObjects.hpp" />
     <ClInclude Include="include\Handlers\AssetHandler.hpp" />
     <ClInclude Include="include\Handlers\InputHandler.hpp" />
     <ClInclude Include="include\Handlers\UIHandler.hpp" />
     <ClInclude Include="include\MainLoop\Game.hpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\GameObjects.cpp" />
+    <ClCompile Include="src\GameObjects\GameObjects.cpp" />
     <ClCompile Include="src\Handlers\AssetHandler.cpp" />
     <ClCompile Include="src\Handlers\InputHandler.cpp" />
     <ClCompile Include="src\Handlers\UIHandler.cpp" />

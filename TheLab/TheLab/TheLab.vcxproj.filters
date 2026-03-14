@@ -46,6 +46,18 @@
     <Filter Include="Resource Files\textures\placeholders\screens">
       <UniqueIdentifier>{3802e003-7ef2-4cbb-b346-6b1e9a887642}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\GameObjects">
+      <UniqueIdentifier>{2049471b-a901-4f2f-83f7-4ccd4ec407bb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\GameObjects\Players">
+      <UniqueIdentifier>{3026612b-5867-48b2-84bc-5a786e8e7dd0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\GameObjects">
+      <UniqueIdentifier>{a49768c9-8e0a-4a84-b70b-7157c1cc7ee3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\GameObjects\Players">
+      <UniqueIdentifier>{064a79de-0b95-4965-88de-11712740acc2}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\Enums\Commands.h">
@@ -60,9 +72,6 @@
     <ClInclude Include="include\Constants\Constants.hpp">
       <Filter>Header Files\Constants</Filter>
     </ClInclude>
-    <ClInclude Include="include\GameObjects.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="include\Handlers\AssetHandler.hpp">
       <Filter>Header Files\Handlers</Filter>
     </ClInclude>
@@ -75,6 +84,9 @@
     <ClInclude Include="include\Enums\PlayerId.h">
       <Filter>Header Files\Enums</Filter>
     </ClInclude>
+    <ClInclude Include="include\GameObjects\GameObjects.hpp">
+      <Filter>Header Files\GameObjects</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\MainLoop\Game.cpp">
@@ -82,9 +94,6 @@
     </ClCompile>
     <ClCompile Include="src\MainLoop\main.cpp">
       <Filter>Source Files\MainLoop</Filter>
-    </ClCompile>
-    <ClCompile Include="src\GameObjects.cpp">
-      <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="src\Handlers\AssetHandler.cpp">
       <Filter>Source Files\Handlers</Filter>
@@ -94,6 +103,9 @@
     </ClCompile>
     <ClCompile Include="src\Handlers\InputHandler.cpp">
       <Filter>Source Files\Handlers</Filter>
+    </ClCompile>
+    <ClCompile Include="src\GameObjects\GameObjects.cpp">
+      <Filter>Source Files\GameObjects</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

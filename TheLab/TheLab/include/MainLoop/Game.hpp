@@ -8,7 +8,7 @@
 #include "../Handlers/AssetHandler.hpp"
 #include "../Handlers/InputHandler.hpp"
 #include "../Handlers/UIHandler.hpp"
-#include "../GameObjects.hpp"
+#include "../GameObjects/GameObjects.hpp"
 
 class Game
 {
@@ -30,7 +30,7 @@ private:
 	int gameScreenWidth{ SCREEN_WIDTH };
 	int gameScreenHeight{ SCREEN_HEIGHT };
 
-	PlayerId playerId{ PLAYER_1 }; // Temp
+	PlayerId playerId{ PLAYER_2 }; // Temp
 
 	AssetHandler* assetHandler { nullptr };
 	UIHandler* uiHandler{ nullptr };

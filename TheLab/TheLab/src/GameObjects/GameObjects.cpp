@@ -1,4 +1,4 @@
-#include "../include/GameObjects.hpp"
+#include "../../include/GameObjects/GameObjects.hpp"
 
 GameObjects::GameObjects(AssetHandler* t_assetHandler) : assetHandler(t_assetHandler)
 {

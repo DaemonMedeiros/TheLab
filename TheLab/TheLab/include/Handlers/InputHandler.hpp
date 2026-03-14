@@ -25,9 +25,11 @@ private:
     const float leftTriggerDeadzone{ -0.9f };
     const float rightTriggerDeadzone{ -0.9f };
 
-    int gamepad{0};
+    int gamepad1{ 0 };
+    int gamepad2{ 0 };
 
     PlayerId playerId{ PLAYER_1 };
+    bool gamepadDetected{ false };
 };
 
 #endif

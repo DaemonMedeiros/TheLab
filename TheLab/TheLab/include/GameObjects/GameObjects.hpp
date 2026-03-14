@@ -2,8 +2,8 @@
 #define GAMEOBJECTS_HPP
 
 #include <iostream>
-#include "../include/Handlers/AssetHandler.hpp"
-#include "../include/Enums/Commands.h"
+#include "../../include/Handlers/AssetHandler.hpp"
+#include "../../include/Enums/Commands.h"
 
 class GameObjects
 {

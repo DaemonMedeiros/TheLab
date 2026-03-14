@@ -14,24 +14,27 @@ Command InputHandler::getActiveCommand()
 {
 	if (IsGamepadAvailable(0)) // 1 Controller
 	{
-		std::cout << "Gamepad 1 Detected\n";
-		float leftStickX = GetGamepadAxisMovement(gamepad, GAMEPAD_AXIS_LEFT_X);
-		float leftStickY = GetGamepadAxisMovement(gamepad, GAMEPAD_AXIS_LEFT_Y);
-		float rightStickX = GetGamepadAxisMovement(gamepad, GAMEPAD_AXIS_RIGHT_X);
-		float rightStickY = GetGamepadAxisMovement(gamepad, GAMEPAD_AXIS_RIGHT_Y);
-		float leftTrigger = GetGamepadAxisMovement(gamepad, GAMEPAD_AXIS_LEFT_TRIGGER);
-		float rightTrigger = GetGamepadAxisMovement(gamepad, GAMEPAD_AXIS_RIGHT_TRIGGER);
-
-		if (leftStickX > -leftStickDeadzoneX && leftStickX < leftStickDeadzoneX) leftStickX = 0.0f;
-		if (leftStickY > -leftStickDeadzoneY && leftStickY < leftStickDeadzoneY) leftStickY = 0.0f;
-		if (rightStickX > -rightStickDeadzoneX && rightStickX < rightStickDeadzoneX) rightStickX = 0.0f;
-		if (rightStickY > -rightStickDeadzoneY && rightStickY < rightStickDeadzoneY) rightStickY = 0.0f;
-		if (leftTrigger < leftTriggerDeadzone) leftTrigger = -1.0f;
-		if (rightTrigger < rightTriggerDeadzone) rightTrigger = -1.0f;
+		if (gamepadDetected == false)
+		{
+			std::cout << "Single Player Detected\n";
+			gamepadDetected = true;
+		}
 	}
-	if (IsGamepadAvailable(1)) // 2 Controllers
+	else if (IsGamepadAvailable(1)) // 2 Controllers
 	{
-		std::cout << "Gamepad 1 Detected\n";
+		if (gamepadDetected == false)
+		{
+			std::cout << "Two Players Detected\n";
+			gamepadDetected = true;
+		}
+	}
+	else
+	{
+		if (gamepadDetected == true)
+		{
+			std::cout << "All Controllers Removed\n";
+			gamepadDetected = false;
+		}
 	}
 
 	if (IsKeyDown(KEY_UP))
