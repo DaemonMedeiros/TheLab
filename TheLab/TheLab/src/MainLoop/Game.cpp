@@ -12,7 +12,7 @@ Game::~Game()
 
 void Game::Run()
 {
-	SetConfigFlags(FLAG_WINDOW_RESIZABLE | FLAG_VSYNC_HINT);
+	SetConfigFlags(FLAG_WINDOW_RESIZABLE | FLAG_VSYNC_HINT | FLAG_MSAA_4X_HINT); // Vsync and Anti-aliasing
 	InitWindow(SCREEN_WIDTH, SCREEN_HEIGHT, "Raylib Template");
 	InitRenderWindow();
 	Init();
@@ -70,10 +70,10 @@ void Game::Update(float& t_dt)
 		case GS_LOADING_TEXTURES:
 			assetHandler->loadTextures();
 		break;
+		case GS_START_MENU:
+			break;
 		case GS_INIT_OBJECTS:
 			break;
-		case GS_START:
-		break;
 		case GS_PLAY:
 			gameObjects->update(t_dt, activeCommand);
 		break;
@@ -91,10 +91,10 @@ void Game::Draw()
 		case GS_LOADING_TEXTURES:
 			assetHandler->drawLoadScreen();
 		break;
+		case GS_START_MENU:
+			break;
 		case GS_INIT_OBJECTS:
 			break;
-		case GS_START:
-		break;
 		case GS_PLAY:
 			gameObjects->draw();
 		break;

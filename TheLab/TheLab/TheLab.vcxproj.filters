@@ -72,6 +72,9 @@
     <ClInclude Include="include\Handlers\InputHandler.hpp">
       <Filter>Header Files\Handlers</Filter>
     </ClInclude>
+    <ClInclude Include="include\Enums\PlayerId.h">
+      <Filter>Header Files\Enums</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\MainLoop\Game.cpp">

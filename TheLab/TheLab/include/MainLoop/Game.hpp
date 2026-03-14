@@ -3,6 +3,7 @@
 
 #include <raylib.h>
 #include "../Enums/GameStates.h"
+#include "../Enums/PlayerId.h"
 #include "../Constants/Constants.hpp"
 #include "../Handlers/AssetHandler.hpp"
 #include "../Handlers/InputHandler.hpp"
@@ -29,11 +30,14 @@ private:
 	int gameScreenWidth{ SCREEN_WIDTH };
 	int gameScreenHeight{ SCREEN_HEIGHT };
 
+	PlayerId playerId{ PLAYER_1 }; // Temp
+
 	AssetHandler* assetHandler { nullptr };
 	UIHandler* uiHandler{ nullptr };
 	GameObjects* gameObjects { nullptr };
-	InputHandler inputHandler;
+	InputHandler inputHandler{ playerId };
 	GameState gamestate{ GS_LOADING_TEXTURES };
 	Command activeCommand{ CMD_NONE };
+	PlayerCount playerCount{ SINGLE_PLAYER };
 };
 #endif

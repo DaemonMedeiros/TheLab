@@ -22,6 +22,7 @@
     <ClInclude Include="include\Constants\Constants.hpp" />
     <ClInclude Include="include\Enums\Commands.h" />
     <ClInclude Include="include\Enums\GameStates.h" />
+    <ClInclude Include="include\Enums\PlayerId.h" />
     <ClInclude Include="include\GameObjects.hpp" />
     <ClInclude Include="include\Handlers\AssetHandler.hpp" />
     <ClInclude Include="include\Handlers\InputHandler.hpp" />
