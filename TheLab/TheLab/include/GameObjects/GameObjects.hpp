@@ -3,12 +3,14 @@
 
 #include <iostream>
 #include "../../include/Handlers/AssetHandler.hpp"
+#include "../../include/Enums/PlayerId.h"
 #include "../../include/Enums/Commands.h"
+#include "../../include/GameObjects/Players/Player.hpp"
 
 class GameObjects
 {
 public:
-	GameObjects(AssetHandler* t_assetHandler);
+	GameObjects(AssetHandler* t_assetHandler, PlayerCount& t_playerCount);
 	~GameObjects();
 
 	void init();
@@ -17,7 +19,12 @@ public:
 
 private:
 
-	AssetHandler* assetHandler{ nullptr };
+	void setupPlayers();
+	void unloadPlayers();
 
+	PlayerCount playerCount{SINGLE_PLAYER};
+	AssetHandler* assetHandler{ nullptr };
+	Player* player_one{ nullptr };
+	Player* player_two{ nullptr };
 };
 #endif

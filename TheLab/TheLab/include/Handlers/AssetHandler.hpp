@@ -19,8 +19,9 @@ private:
 	Texture2D defaultTexture{ LoadTexture("./resources/textures/default.jpeg") };
 
 	void loadScreenTextures();
+	void loadPlayerTextures();
 
-	static const int TOTAL_TEXTURE_COUNT{ 25 };
+	static const int TOTAL_TEXTURE_COUNT{ 10 };
 	std::string textureNames[TOTAL_TEXTURE_COUNT];
 	Texture2D textures[TOTAL_TEXTURE_COUNT];
 	int loadProgress{ 0 };

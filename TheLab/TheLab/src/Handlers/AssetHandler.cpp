@@ -25,6 +25,7 @@ void AssetHandler::loadTextures()
 	else
 	{
 		loadScreenTextures();
+		loadPlayerTextures();
 		loadProgress++;
 	}
 }
@@ -91,6 +92,17 @@ void AssetHandler::loadScreenTextures()
 	case 8:
 		textures[8] = LoadTexture("./resources/textures/placeholders/screens/8_Credits_PH.jpg");
 		textureNames[8] = "Credits";
+		break;
+	}
+}
+
+void AssetHandler::loadPlayerTextures()
+{
+	switch (loadProgress)
+	{
+	case 9:
+		textures[9] = LoadTexture("./resources/textures/placeholders/players/Player_PH.jpeg");
+		textureNames[9] = "Player";
 		break;
 	}
 }

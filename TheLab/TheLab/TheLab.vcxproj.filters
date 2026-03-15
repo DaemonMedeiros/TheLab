@@ -58,6 +58,9 @@
     <Filter Include="Header Files\GameObjects\Players">
       <UniqueIdentifier>{064a79de-0b95-4965-88de-11712740acc2}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Resource Files\textures\placeholders\players">
+      <UniqueIdentifier>{90462dd1-065b-4f45-ad03-9f18e021a8fb}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\Enums\Commands.h">
@@ -87,6 +90,9 @@
     <ClInclude Include="include\GameObjects\GameObjects.hpp">
       <Filter>Header Files\GameObjects</Filter>
     </ClInclude>
+    <ClInclude Include="include\GameObjects\Players\Player.hpp">
+      <Filter>Header Files\GameObjects\Players</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\MainLoop\Game.cpp">
@@ -106,6 +112,9 @@
     </ClCompile>
     <ClCompile Include="src\GameObjects\GameObjects.cpp">
       <Filter>Source Files\GameObjects</Filter>
+    </ClCompile>
+    <ClCompile Include="src\GameObjects\Players\Player.cpp">
+      <Filter>Source Files\GameObjects\Players</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -183,6 +192,9 @@
     </Image>
     <Image Include="resources\textures\placeholders\screens\4_Gameplay_PH.jpg">
       <Filter>Resource Files\textures\placeholders\screens</Filter>
+    </Image>
+    <Image Include="resources\textures\placeholders\players\Player_PH.jpeg">
+      <Filter>Resource Files\textures\placeholders\players</Filter>
     </Image>
   </ItemGroup>
 </Project>

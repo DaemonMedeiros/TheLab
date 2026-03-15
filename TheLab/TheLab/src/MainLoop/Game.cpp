@@ -30,7 +30,7 @@ void Game::Init()
 {
 	assetHandler = new AssetHandler;
 	uiHandler = new UIHandler (assetHandler);
-	gameObjects = new GameObjects (assetHandler);
+	gameObjects = new GameObjects (assetHandler, playerCount);
 	gameObjects->init();
 }
 

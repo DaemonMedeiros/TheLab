@@ -24,6 +24,7 @@
     <ClInclude Include="include\Enums\GameStates.h" />
     <ClInclude Include="include\Enums\PlayerId.h" />
     <ClInclude Include="include\GameObjects\GameObjects.hpp" />
+    <ClInclude Include="include\GameObjects\Players\Player.hpp" />
     <ClInclude Include="include\Handlers\AssetHandler.hpp" />
     <ClInclude Include="include\Handlers\InputHandler.hpp" />
     <ClInclude Include="include\Handlers\UIHandler.hpp" />
@@ -31,6 +32,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\GameObjects\GameObjects.cpp" />
+    <ClCompile Include="src\GameObjects\Players\Player.cpp" />
     <ClCompile Include="src\Handlers\AssetHandler.cpp" />
     <ClCompile Include="src\Handlers\InputHandler.cpp" />
     <ClCompile Include="src\Handlers\UIHandler.cpp" />
@@ -55,6 +57,7 @@
     <Image Include="resources\textures\placeholders\levels\8_MtnPeaks_PH.jpg" />
     <Image Include="resources\textures\placeholders\levels\10_SeaCaves_PH.jpg" />
     <Image Include="resources\textures\placeholders\levels\6_SnowForest_PH.jpg" />
+    <Image Include="resources\textures\placeholders\players\Player_PH.jpeg" />
     <Image Include="resources\textures\placeholders\screens\4_Gameplay_PH.jpg" />
     <Image Include="resources\textures\placeholders\screens\8_Credits_PH.jpg" />
     <Image Include="resources\textures\placeholders\screens\7_GameEnd_PH.jpg" />
