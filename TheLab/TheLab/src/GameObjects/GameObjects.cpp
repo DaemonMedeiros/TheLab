@@ -14,19 +14,23 @@ GameObjects::~GameObjects()
 
 void GameObjects::init()
 {
-	setupPlayers();
+	if (!objectsInitialized)
+	{
+		setupPlayers();
+		std::cout << "GameObjects : Initialized\n";
+		objectsInitialized = true;
+	}
 }
 
 void GameObjects::setupPlayers()
 {
-	player_one = new Player(assetHandler->getTexture("player"));
-	if (playerCount == TWO_PLAYER){player_two = new Player(assetHandler->getTexture("player"));}
+	player_one = new Player(PLAYER_1, assetHandler->getTexture("Player"));
+	if (playerCount == TWO_PLAYER){player_two = new Player(PLAYER_2, assetHandler->getTexture("Player"));}
 }
 
 void GameObjects::unloadPlayers()
 {
-	delete(player_one);
-	player_one = nullptr;
+	delete(player_one); player_one = nullptr;
 	if (playerCount == TWO_PLAYER) { delete(player_two); player_two = nullptr; }
 }
 
@@ -35,7 +39,9 @@ void GameObjects::update(float& t_dt, Command& t_command)
 	// update game objects here
 }
 
-void GameObjects::draw()
+void GameObjects::draw(RenderTexture2D& t_window)
 {
 	// draw game objects here
+	player_one->draw(t_window);
+	if (playerCount == TWO_PLAYER) { player_two->draw(t_window); }
 }

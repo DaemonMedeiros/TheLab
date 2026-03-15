@@ -25,6 +25,8 @@ private:
 	void Draw();
 	void FreeResources();
 
+	void TemporaryDevTools();
+
 	RenderTexture2D gameWindow{ 0 };
 	Vector2 gameWindowScale{ 1.0f,1.0f };
 	int gameScreenWidth{ SCREEN_WIDTH };

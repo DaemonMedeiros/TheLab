@@ -30,8 +30,7 @@ void Game::Init()
 {
 	assetHandler = new AssetHandler;
 	uiHandler = new UIHandler (assetHandler);
-	gameObjects = new GameObjects (assetHandler, playerCount);
-	gameObjects->init();
+	gameObjects = new GameObjects(assetHandler, playerCount);
 }
 
 void Game::InitRenderWindow()
@@ -62,6 +61,8 @@ void Game::DrawRenderWindow()
 
 void Game::Update(float& t_dt)
 {
+	TemporaryDevTools(); // Temp
+
 	activeCommand = inputHandler.getActiveCommand();
 	uiHandler->update(t_dt, activeCommand, gamestate);
 	
@@ -73,6 +74,7 @@ void Game::Update(float& t_dt)
 		case GS_START_MENU:
 			break;
 		case GS_INIT_OBJECTS:
+			gameObjects->init();
 			break;
 		case GS_PLAY:
 			gameObjects->update(t_dt, activeCommand);
@@ -96,10 +98,10 @@ void Game::Draw()
 		case GS_INIT_OBJECTS:
 			break;
 		case GS_PLAY:
-			gameObjects->draw();
+			gameObjects->draw(gameWindow);
 		break;
 		case GS_PAUSE:
-			gameObjects->draw();
+			gameObjects->draw(gameWindow);
 		break;
 		case GS_END:
 		break;
@@ -113,4 +115,33 @@ void Game::FreeResources()
 	delete(uiHandler);
 	delete(gameObjects);
 	UnloadRenderTexture(gameWindow);
+}
+
+void Game::TemporaryDevTools()
+{
+	if (IsKeyPressed(KEY_ONE))
+	{
+		gamestate = GS_START_MENU;
+		std::cout << "Gamestate : GS_START_MENU\n";
+	}
+	if (IsKeyPressed(KEY_TWO))
+	{
+		gamestate = GS_INIT_OBJECTS;
+		std::cout << "Gamestate : GS_INIT_OBJECTS\n";
+	}
+	if (IsKeyPressed(KEY_THREE))
+	{
+		gamestate = GS_PLAY;
+		std::cout << "Gamestate : GS_PLAY\n";
+	}
+	if (IsKeyPressed(KEY_FOUR))
+	{
+		gamestate = GS_PAUSE;
+		std::cout << "Gamestate : GS_PAUSE\n";
+	}
+	if (IsKeyPressed(KEY_FIVE))
+	{
+		gamestate = GS_END;
+		std::cout << "Gamestate : GS_END\n";
+	}
 }

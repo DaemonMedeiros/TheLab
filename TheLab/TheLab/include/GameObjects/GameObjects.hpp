@@ -15,12 +15,14 @@ public:
 
 	void init();
 	void update(float& t_dt, Command& t_command);
-	void draw();
+	void draw(RenderTexture2D& t_window);
 
 private:
 
 	void setupPlayers();
 	void unloadPlayers();
+
+	bool objectsInitialized{ false };
 
 	PlayerCount playerCount{SINGLE_PLAYER};
 	AssetHandler* assetHandler{ nullptr };
