@@ -34,9 +34,11 @@ void GameObjects::unloadPlayers()
 	if (playerCount == TWO_PLAYER) { delete(player_two); player_two = nullptr; }
 }
 
-void GameObjects::update(float& t_dt, Command& t_command)
+void GameObjects::update(float& t_dt)
 {
 	// update game objects here
+	player_one->update(t_dt);
+	if (playerCount == TWO_PLAYER) { player_two->update(t_dt); }
 }
 
 void GameObjects::draw(RenderTexture2D& t_window)

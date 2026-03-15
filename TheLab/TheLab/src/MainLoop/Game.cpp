@@ -62,8 +62,6 @@ void Game::DrawRenderWindow()
 void Game::Update(float& t_dt)
 {
 	TemporaryDevTools(); // Temp
-
-	activeCommand = inputHandler.getActiveCommand();
 	uiHandler->update(t_dt, activeCommand, gamestate);
 	
 	switch (gamestate)
@@ -77,7 +75,7 @@ void Game::Update(float& t_dt)
 			gameObjects->init();
 			break;
 		case GS_PLAY:
-			gameObjects->update(t_dt, activeCommand);
+			gameObjects->update(t_dt);
 		break;
 		case GS_PAUSE:
 		break;

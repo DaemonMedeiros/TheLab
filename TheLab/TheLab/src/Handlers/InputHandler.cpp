@@ -28,14 +28,6 @@ Command InputHandler::getActiveCommand()
 			gamepadDetected = true;
 		}
 	}
-	else
-	{
-		if (gamepadDetected == true)
-		{
-			std::cout << "All Controllers Removed\n";
-			gamepadDetected = false;
-		}
-	}
 
 	if (IsKeyDown(KEY_UP))
 	{

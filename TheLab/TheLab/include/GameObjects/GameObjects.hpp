@@ -14,7 +14,7 @@ public:
 	~GameObjects();
 
 	void init();
-	void update(float& t_dt, Command& t_command);
+	void update(float& t_dt);
 	void draw(RenderTexture2D& t_window);
 
 private:
