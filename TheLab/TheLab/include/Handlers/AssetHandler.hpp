@@ -14,6 +14,7 @@ public:
 	Texture2D& getTexture(std::string t_name);
 	void unloadTextures();
 	void drawLoadScreen();
+	bool finishedLoading{ false };
 
 private:
 	Texture2D defaultTexture{ LoadTexture("./resources/textures/default.jpeg") };
@@ -25,7 +26,5 @@ private:
 	std::string textureNames[TOTAL_TEXTURE_COUNT];
 	Texture2D textures[TOTAL_TEXTURE_COUNT];
 	int loadProgress{ 0 };
-	bool finishedLoading{ false };
-
 };
 #endif

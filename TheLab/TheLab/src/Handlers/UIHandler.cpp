@@ -11,7 +11,7 @@ UIHandler::~UIHandler()
 	std::cout << "UIHandler : Object Destroyed\n";
 }
 
-void UIHandler::update(float& t_dt, Command& t_command, GameState& t_gamestate)
+void UIHandler::update(float& t_dt, GameState& t_gamestate)
 {
 	if (t_gamestate != activeUI)
 	{

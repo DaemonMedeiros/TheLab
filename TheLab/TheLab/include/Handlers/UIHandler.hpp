@@ -4,8 +4,8 @@
 #include <iostream>
 
 #include "../../include/Handlers/AssetHandler.hpp"
+#include "../../include/Handlers/InputHandler.hpp"
 #include "../../include/Enums/GameStates.h"
-#include "../../include/Enums/Commands.h"
 
 class UIHandler
 {
@@ -13,7 +13,7 @@ public:
 	UIHandler(AssetHandler* t_assetHandler);
 	~UIHandler();
 
-	void update(float& t_dt, Command& t_command, GameState& t_gamestate);
+	void update(float& t_dt, GameState& t_gamestate);
 	void draw(GameState& t_gamestate);
 
 private:

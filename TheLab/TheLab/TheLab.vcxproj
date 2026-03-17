@@ -26,18 +26,22 @@
     <ClInclude Include="include\GameObjects\GameObjects.hpp" />
     <ClInclude Include="include\GameObjects\Players\Player.hpp" />
     <ClInclude Include="include\Handlers\AssetHandler.hpp" />
+    <ClInclude Include="include\Handlers\GameStateHandler.hpp" />
     <ClInclude Include="include\Handlers\InputHandler.hpp" />
     <ClInclude Include="include\Handlers\UIHandler.hpp" />
     <ClInclude Include="include\MainLoop\Game.hpp" />
+    <ClInclude Include="include\Utilities\Observer.hpp" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\GameObjects\GameObjects.cpp" />
     <ClCompile Include="src\GameObjects\Players\Player.cpp" />
     <ClCompile Include="src\Handlers\AssetHandler.cpp" />
+    <ClCompile Include="src\Handlers\GameStateHandler.cpp" />
     <ClCompile Include="src\Handlers\InputHandler.cpp" />
     <ClCompile Include="src\Handlers\UIHandler.cpp" />
     <ClCompile Include="src\MainLoop\Game.cpp" />
     <ClCompile Include="src\MainLoop\main.cpp" />
+    <ClCompile Include="src\Utilities\Observer.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="resources\textures\default.jpeg" />

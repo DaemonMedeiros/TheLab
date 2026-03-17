@@ -61,6 +61,12 @@
     <Filter Include="Resource Files\textures\placeholders\players">
       <UniqueIdentifier>{90462dd1-065b-4f45-ad03-9f18e021a8fb}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\Utilities">
+      <UniqueIdentifier>{cfee8ff7-2368-4125-aab4-ca147a142182}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Utilities">
+      <UniqueIdentifier>{dfda9a41-dc27-4669-bf5b-c7739e778604}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\Enums\Commands.h">
@@ -93,6 +99,12 @@
     <ClInclude Include="include\GameObjects\Players\Player.hpp">
       <Filter>Header Files\GameObjects\Players</Filter>
     </ClInclude>
+    <ClInclude Include="include\Utilities\Observer.hpp">
+      <Filter>Header Files\Utilities</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Handlers\GameStateHandler.hpp">
+      <Filter>Header Files\Handlers</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\MainLoop\Game.cpp">
@@ -115,6 +127,12 @@
     </ClCompile>
     <ClCompile Include="src\GameObjects\Players\Player.cpp">
       <Filter>Source Files\GameObjects\Players</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Utilities\Observer.cpp">
+      <Filter>Source Files\Utilities</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Handlers\GameStateHandler.cpp">
+      <Filter>Source Files\Handlers</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
